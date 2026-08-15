@@ -1,130 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil Tiwari | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Tiwari — Avionics &amp; Embedded Systems Engineer</title>
+<meta name="description" content="Portfolio of Sahil Tiwari — System Engineer at Endure Air Systems, working on avionics and embedded systems for heavy-payload UAVs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A1420%22/><path d=%22M20 70 L35 30 L45 30 L60 70 L50 70 L47 60 L33 60 L30 70 Z M35.5 52 L44.5 52 L40 38 Z%22 fill=%22%23F5A623%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2>Sahil Tiwari</h2>
+<!-- ===== Trace spine (signature element) ===== -->
+<svg class="trace-spine" id="traceSpine" viewBox="0 0 40 3200" preserveAspectRatio="none" aria-hidden="true">
+  <path id="tracePath" d="M20 0 V3200" />
+</svg>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<!-- ===== Top bar ===== -->
+<header class="topbar" id="topbar">
+  <a href="#home" class="brand">
+    <span class="brand-mark" aria-hidden="true">ST</span>
+    <span class="brand-text">SAHIL&nbsp;TIWARI</span>
+  </a>
 
-<section class="hero" id="home">
-    <div>
-        <h1>Hello, I'm Sahil Tiwari</h1>
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-link" data-nav>Home</a>
+    <a href="#about" class="nav-link" data-nav>About</a>
+    <a href="#experience" class="nav-link" data-nav>Experience</a>
+    <a href="#skills" class="nav-link" data-nav>Skills</a>
+    <a href="#projects" class="nav-link" data-nav>Projects</a>
+    <a href="#achievements" class="nav-link" data-nav>Achievements</a>
+    <a href="#contact" class="nav-link nav-cta" data-nav>Contact</a>
+  </nav>
 
-        <h3>Electronics & Communication Engineer | UAV Engineer | Embedded Systems</h3>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="4.2"/>
+      <path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M2.5 12h2.5M19 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+    </svg>
+  </button>
 
-        <p>
-            Passionate about drones, embedded systems, avionics,
-            and autonomous technologies.
-        </p>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-        <a href="#contact" class="btn">Contact Me</a>
+<main>
+
+  <!-- ===== HOME / HERO ===== -->
+  <section id="home" class="section hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-title">System Engineer —<br>avionics, embedded,<br>and everything<br><span class="accent">in between.</span></h1>
+        <p class="hero-sub">System Engineer at <strong>Endure&nbsp;Air&nbsp;Systems</strong>, working on avionics
+          and embedded systems for the Sabal‑40 heavy‑payload UAV and FPV drone fleet. Avionics and Embedded
+          Systems Engineer with hands‑on experience across IoT systems, circuit design, PCB layout, and
+          flight‑controller integration.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-frame">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <div class="photo-placeholder" id="photoPlaceholder">
+          <div class="photo-placeholder" id="photoPlaceholder">
+             <img src="sahil.jpg" alt="Sahil Tiwari">
+         </div>
+          
+        </div>
+        <p class="photo-caption">// SAHIL_TIWARI.JPG</p>
+      </div>
     </div>
-</section>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
 
-<section id="about">
-    <h2>About Me</h2>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">About</h2>
 
-    <p>
-        I am an Electronics & Communication Engineer with experience in UAV
-        development, avionics integration, embedded systems,
-        and autonomous flight technologies.
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>Electronics and Communication Engineering student with a Diploma in Electrical Engineering and strong
+          fundamentals in analog electronics, electrical machines, and power systems. Skilled in circuit design,
+          PCB design, hardware development, and system testing, with hands‑on experience in microcontrollers
+          (ESP32, ESP8266, Arduino, Raspberry Pi), Embedded C, and sensor interfacing.</p>
+        <p>Experienced in schematic design and UAV hardware integration, with a strong interest in electronic
+          circuit analysis and hardware development.</p>
+      </div>
 
-        I enjoy designing drones, working with Pixhawk flight controllers,
-        STM32 microcontrollers, Raspberry Pi, and IoT systems.
-    </p>
-</section>
+      <div class="about-education">
+        <h3 class="sub-heading">Education</h3>
+        <ul class="edu-list">
+          <li>
+            <p class="edu-degree">B.Tech, Electronics &amp; Communication Engineering</p>
+            <p class="edu-school">Bundelkhand Institute of Engineering and Technology, Jhansi</p>
+            <p class="edu-meta">2022 – 2026</p>
+          </li>
+          <li>
+            <p class="edu-degree">Diploma, Electrical Engineering</p>
+            <p class="edu-school">Govt. Polytechnic, Premdhar Patti, Pratapgarh</p>
+          </li>
+          <li>
+            <p class="edu-degree">High School</p>
+            <p class="edu-school">Ram Aasre Inter College, Shahganj Mukeempur, Ayodhya</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="skills">
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">Experience</h2>
 
-<h2>Skills</h2>
+    <div class="timeline">
 
-<div class="cards">
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">June 2026 — Present</p>
+          <h3 class="tl-role">System Engineer</h3>
+          <p class="tl-org">Endure Air Systems Pvt. Ltd. · Noida, U.P.</p>
+          <ul class="tl-points">
+            <li>Own avionics and system‑level performance for Sabal‑40, a heavy‑payload UAV, plus the full FPV drone range.</li>
+            <li>Lead electronics and avionics R&amp;D — design, testing, and integration of onboard systems for reliable flight.</li>
+            <li>Run end‑to‑end integration and validation of avionics hardware across subsystems.</li>
+          </ul>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Embedded Systems</h3>
-<p>STM32, Arduino, ESP32</p>
-</div>
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">5 months</p>
+          <h3 class="tl-role">Avionics &amp; Hardware Engineering Intern</h3>
+          <p class="tl-org">Endure Air Systems Pvt. Ltd. · Noida, U.P.</p>
+          <ul class="tl-points">
+            <li>Avionics integration and electrical validation on Sabal‑40, Sabal‑50, and FPV drones.</li>
+            <li>Power distribution, wiring, system testing, and troubleshooting of embedded avionics hardware.</li>
+          </ul>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Drone Technologies</h3>
-<p>Pixhawk, ArduPilot, Mission Planner</p>
-</div>
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">45 days</p>
+          <h3 class="tl-role">Drone Hardware Engineering Intern</h3>
+          <p class="tl-org">Amos Aerospace, 11 Corps Zone Workshop · Jalandhar Cantt, Punjab</p>
+          <ul class="tl-points">
+            <li>Design and testing of the Kamikaze FPV Drone and F450 Training Drone — assembly, configuration, flight validation.</li>
+            <li>Hands‑on with Pixhawk, Zerodrag, Speedybee, and Radiolink Crossflight V2 flight controllers.</li>
+            <li>Developed strong skills in drone integration, embedded electronics, and system performance testing.</li>
+          </ul>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Programming</h3>
-<p>C, C++, Python</p>
-</div>
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">1 month</p>
+          <h3 class="tl-role">IoT Platform Development Intern</h3>
+          <p class="tl-org">Shyam Technosolutions · Kanpur, U.P.</p>
+          <ul class="tl-points">
+            <li>IoT platform development and testing on Raspberry Pi, ESP32, and Arduino Nano with various sensors.</li>
+            <li>Hardware interfacing, IoT system integration, and troubleshooting.</li>
+          </ul>
+        </div>
+      </article>
 
-<div class="card">
-<h3>PCB Design</h3>
-<p>KiCad, Electronics Design</p>
-</div>
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">1 year</p>
+          <h3 class="tl-role">Head of R&amp;D</h3>
+          <p class="tl-org">The Drone Learner's Club · BIET Jhansi</p>
+          <ul class="tl-points">
+            <li>Promoted from Coordinator to Head of R&amp;D, leading drone and RC‑plane projects.</li>
+            <li>Mentor juniors and drive technical innovation in UAV and embedded systems.</li>
+          </ul>
+        </div>
+      </article>
 
-</div>
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <p class="tl-date">BIET Jhansi</p>
+          <h3 class="tl-role">Embedded Systems &amp; IoT Development</h3>
+          <p class="tl-org">IoT Lab · BIET Jhansi</p>
+          <ul class="tl-points">
+            <li>Experienced with Arduino, ESP8266, ESP32, and Raspberry Pi through hands‑on IoT work.</li>
+            <li>Built smart systems using sensors (DHT11, PM, LDR, PIR, flame, moisture, RFID) and actuators.</li>
+            <li>Integrated with Blynk and ThingSpeak for real‑time cloud monitoring.</li>
+          </ul>
+        </div>
+      </article>
 
-</section>
+    </div>
+  </section>
 
-<section id="projects">
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">Skills</h2>
 
-<h2>Projects</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 class="sub-heading">Languages</h3>
+        <div class="chip-row">
+          <span class="chip">C</span><span class="chip">Python</span><span class="chip">HTML</span>
+          <span class="chip">CSS</span><span class="chip">Ladder Logic</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="sub-heading">Microcontrollers &amp; Hardware</h3>
+        <div class="chip-row">
+          <span class="chip">ESP32</span><span class="chip">ESP8266</span><span class="chip">Arduino</span>
+          <span class="chip">Raspberry Pi</span><span class="chip">Pixhawk</span><span class="chip">NodeMCU</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="sub-heading">Developer Tools</h3>
+        <div class="chip-row">
+          <span class="chip">Mission Planner</span><span class="chip">Arduino IDE</span><span class="chip">MATLAB</span>
+          <span class="chip">BetaFlight</span><span class="chip">KiCad</span><span class="chip">Proteus</span><span class="chip">Draw.io</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="sub-heading">Frameworks &amp; Technologies</h3>
+        <div class="chip-row">
+          <span class="chip">ArduPilot</span><span class="chip">Blynk</span><span class="chip">ThingSpeak</span>
+          <span class="chip">Multisim</span><span class="chip">PCB Design</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="sub-heading">Operating Systems</h3>
+        <div class="chip-row">
+          <span class="chip">Linux (Raspberry Pi OS, Ubuntu)</span><span class="chip">Windows</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="cards">
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">Projects</h2>
 
-<div class="card">
-<h3>Autonomous Drone</h3>
-<p>Designed and integrated autonomous UAV systems using Pixhawk.</p>
-</div>
+    <div class="project-grid">
 
-<div class="card">
-<h3>IoT Home Automation</h3>
-<p>ESP32 based automation with cloud connectivity.</p>
-</div>
+      <article class="card project-card">
+        <p class="card-tag">UAV / Drones</p>
+        <h3 class="card-title">Kamikaze FPV Drone</h3>
+        <p class="card-desc">High‑speed FPV drone built with high‑performance motors, ESCs, and a low‑latency FPV
+          system. Integrated sensors and a custom payload‑drop mechanism with tuned flight control.</p>
+        <p class="card-stack">ArduPilot · ESCs · FPV System</p>
+      </article>
 
-<div class="card">
-<h3>Ground Control Station</h3>
-<p>Telemetry integration and long-range communication.</p>
-</div>
+      <article class="card project-card">
+        <p class="card-tag">UAV / Drones</p>
+        <h3 class="card-title">Autonomous Obstacle Avoidance</h3>
+        <p class="card-desc">Integrated a LiDAR sensor with a Pixhawk flight controller for autonomous navigation
+          with real‑time obstacle detection, terrain following, and precision landing on a quadcopter.</p>
+        <p class="card-stack">Pixhawk · TFmini LiDAR</p>
+      </article>
 
-</div>
+      <article class="card project-card">
+        <p class="card-tag">IoT / Automation</p>
+        <h3 class="card-title">IoT Control Panel Dashboard</h3>
+        <p class="card-desc">Real‑time dashboard on Raspberry Pi with Flask‑SocketIO for multi‑user GPIO control
+          (relay, LED, motor, pump), live DHT11 monitoring, and persistent pin configuration.</p>
+        <p class="card-stack">Python · Flask · Raspberry Pi · WebSocket</p>
+      </article>
 
-</section>
+      <article class="card project-card">
+        <p class="card-tag">IoT / Automation</p>
+        <h3 class="card-title">Automated Medicinal Pellet Machine</h3>
+        <p class="card-desc">DST, Govt. of India‑funded project: an IoT‑based automated animal‑feed pellet machine
+          using load cells and temperature sensors, with cloud connectivity for precision dosage monitoring.</p>
+        <p class="card-stack">Raspberry Pi · IoT · Load Cells</p>
+      </article>
 
-<section id="contact">
+      <article class="card project-card">
+        <p class="card-tag">IoT / Automation</p>
+        <h3 class="card-title">Sensor‑Based Home Automation</h3>
+        <p class="card-desc">NodeMCU system with PM, LDR, IR flame, DHT11, PIR, and moisture sensors for automated
+          lighting, security, and climate control, plus RFID door access and servo‑based control.</p>
+        <p class="card-stack">NodeMCU · Blynk · ThingSpeak</p>
+      </article>
 
-<h2>Contact</h2>
+      <article class="card project-card">
+        <p class="card-tag">IoT / Automation</p>
+        <h3 class="card-title">Vehicle Tracking System</h3>
+        <p class="card-desc">Smart tracking system with real‑time location on Google Maps for wireless IoT‑based
+          transportation monitoring and anti‑theft applications.</p>
+        <p class="card-stack">ESP32 · NEO‑6M GPS · Blynk Cloud</p>
+      </article>
 
-<p>Email: your@email.com</p>
+      <article class="card project-card">
+        <p class="card-tag">PCB / Circuit Design</p>
+        <h3 class="card-title">Custom PCB Design Suite</h3>
+        <p class="card-desc">Designed and developed multiple PCBs — a transformerless power supply, servo tester,
+          DC motor speed controller, and USB‑to‑UART converter.</p>
+        <p class="card-stack">KiCad · Proteus</p>
+      </article>
 
-<p>GitHub:
-<a href="https://github.com/sahiltiwari3336-sudo" target="_blank">
-github.com/sahiltiwari3336-sudo
-</a>
-</p>
+      <article class="card project-card">
+        <p class="card-tag">PCB / Circuit Design</p>
+        <h3 class="card-title">Four‑Channel TX‑RX Circuit</h3>
+        <p class="card-desc">Four‑channel remote control circuit built on a 433MHz RF module with HT12E/HT12D
+          encoder‑decoder ICs, with each channel verified using LED outputs.</p>
+        <p class="card-stack">433MHz RF · HT12E / HT12D</p>
+      </article>
 
-</section>
+    </div>
+  </section>
 
-<footer>
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">Achievements</h2>
 
-<p>© 2026 Sahil Tiwari | All Rights Reserved</p>
+    <div class="achieve-grid">
+      <div class="card achieve-card">
+        <p class="achieve-label">1st Position</p>
+        <h3 class="achieve-title">Yuva Utsav — Zonal &amp; District Level</h3>
+        <p class="achieve-desc">Secured 1st position with a 7‑inch Kamikaze drone at the Science Mela, organized by
+          the Youth Welfare Department; selected for the State level.</p>
+      </div>
+      <div class="card achieve-card">
+        <p class="achieve-label">3rd Place</p>
+        <h3 class="achieve-title">Robo Race — Innovanza Tech Fest, BIET Jhansi</h3>
+        <p class="achieve-desc">Designed and built a competitive robo car for the racing event.</p>
+      </div>
+      <div class="card achieve-card">
+        <p class="achieve-label">3rd Place</p>
+        <h3 class="achieve-title">Prastuti Competition</h3>
+        <p class="achieve-desc">Group discussion competition organized by the United Group of Institutions.</p>
+      </div>
+      <div class="card achieve-card">
+        <p class="achieve-label">Workshop</p>
+        <h3 class="achieve-title">RC Plane Workshop</h3>
+        <p class="achieve-desc">Practical experience in RC plane fabrication, assembly, and flight testing under the Drone Learner's Club.</p>
+      </div>
+      <div class="card achieve-card">
+        <p class="achieve-label">Coordinator</p>
+        <h3 class="achieve-title">Aeroworks 3.0</h3>
+        <p class="achieve-desc">Organized and delivered hands‑on training sessions on RC plane design and fabrication for junior students.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <p class="eyebrow"></p>
+    <h2 class="section-title">Let's talk</h2>
+    <p class="contact-sub">Open to conversations about avionics, embedded systems, and UAV engineering roles or
+      collaborations.</p>
+
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:sahiltiwari3336@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">sahiltiwari3336@gmail.com</span>
+      </a>
+
+      <a class="contact-link" href="https://www.linkedin.com/in/sahil-tiwari-49ba01221/" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value social-value">
+          <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/>
+          </svg>
+          Click here
+        </span>
+      </a>
+
+      <a class="contact-link" href="https://www.instagram.com/its_sahiltiwari?igsh=MXR6Mmd0ajc2ZXNmbw==&igsi=MXR6Mmd0ajc2ZXNmbw==" target="_blank" rel="noopener">
+        <span class="contact-label">Instagram</span>
+        <span class="contact-value social-value">
+          <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.2" cy="6.8" r="1"/>
+          </svg>
+          Click here
+        </span>
+      </a>
+
+      <a class="contact-link" href="https://www.facebook.com/share/1C2oiSybQb/" target="_blank" rel="noopener">
+        <span class="contact-label">Facebook</span>
+        <span class="contact-value social-value">
+          <svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M14 9h3V5.5h-3C11.5 5.5 10 7 10 9.3V11H7.5v3.5H10V21h3.5v-6.5H16l.6-3.5h-3.1V9.6c0-.6.4-.6.5-.6Z"/>
+          </svg>
+          Click here
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Sahil Tiwari · <span id="year"></span></p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
